@@ -47,6 +47,11 @@
 		padding: 9.03em 4.17em;
 	}
 
+	.py-0{
+		padding-top: 0em;
+		padding-bottom: 0em;
+	}
+
 	@media screen and (max-width: 479px) {
 		.section{
 			padding: 4em 1em;
@@ -159,7 +164,7 @@
 
 	@media (max-width: 991px) {
 		.div-form {
-			max-width: 100%;
+			max-width: 95%;
 			flex-wrap: wrap;
 		}
 	}
@@ -468,7 +473,7 @@
 
 	@media (max-width: 479px) {
 		.hero-content {
-			padding: 2em 0em 0em;
+			padding: 4em 0em 0em;
 		}
 	}
 
@@ -849,18 +854,6 @@
 		  transform: translateX(-100%);
 		}
 	  }
-
-	@media (max-width: 991px) {
-		.company-logo__wrapp {
-			flex-wrap: wrap;
-		}
-	}
-
-	@media (max-width: 479px) {
-		.company-logo__wrapp{
-			padding: 2em 1em;
-		}
-	}
 
 	.company-logo__img {
 		height: 1.39em;
@@ -1640,6 +1633,47 @@
 		margin-top: 3.61em;
 	}
 
+	.guaranteed-card__top-text{
+		font-weight: 500;
+		font-size: 1.11em;
+	}
+
+	@media screen and (max-width: 760px){
+		.guaranteed-content__top-wrapp{
+			padding-left: 2em;
+		}
+
+		.guaranteed-content__bottom-wrapp{
+			padding: 0em 1em;
+		}
+
+		.guaranteed-card__top-text{
+			font-weight: 500;
+			font-size: 0.97em;
+		}
+	}
+
+	@media screen and (max-width: 479px){
+		.our-work__slide-arrow{
+			width: 2em;
+			height: 2em;
+		}
+
+		.guaranteed__descr-wrapp{
+			margin-top: 2em;
+		}
+
+		.guaranteed-content__bottom-wrapp{
+			flex-direction: column;
+			margin-top: 3em;
+			margin-bottom: 0em;
+		}
+
+		.guaranteed-content__bottom-card{
+			width: 90%;
+		}
+	}
+
 	.guaranteed__icon{
 		width: 1.39em;
 		min-width: 1.39em;
@@ -2007,6 +2041,8 @@
 
 	.btn__upfront {
 		text-decoration: none;
+		position: relative;
+		z-index: 2;
 		justify-content: center;
 		border-radius: 40px;
 		background-color: var(--Main, #306cfe);
