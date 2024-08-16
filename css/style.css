@@ -41,12 +41,6 @@
 		padding-bottom: 0em;
 	}
 
-	@media screen and (max-width: 479px) {
-		.section{
-			padding: 4em 1em;
-		}
-	}
-
 	.container{
 		max-width: 1120px;
 		width: 100%;
@@ -155,6 +149,10 @@
 		.div-form {
 			max-width: 95%;
 			flex-wrap: wrap;
+		}
+
+		.form-container{
+			width: 90%;
 		}
 	}
 
@@ -412,10 +410,16 @@
 		}
 	}
 
-	@media (max-width: 479px) {
-		.hero-circle{
-			display:none;
+	@media screen and (max-width: 479px) {
+		.section{
+			padding: 4em 1em;
 		}
+	}
+
+	@media (max-width: 479px) {
+		/* .hero-circle{
+			display:none;
+		} */
 
 		.hero-logo {
 			max-width: 40%;
