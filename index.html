@@ -160,6 +160,8 @@
 
       <section class="section section-hero" id="hero">
         <div class="container">
+          <div class="hero-circle"></div>
+          
           <div class="hero-content">
             <img
               loading="lazy"
@@ -2108,33 +2110,6 @@
     </div>
 
     <script>
-      //annimatioin for our work cards
-
-      // document.addEventListener("DOMContentLoaded", function() {
-      //   const cards = document.querySelectorAll('.our-work__bottom-сard');
-      //   const duration = 4000;
-
-      //   function animateLine(card, index) {
-      //     const line = card.querySelector('.bottom-card__line');
-      //     const title = card.querySelector('.bottom-card__title');
-
-      //     title.style.color =  'var(--btn-color)';
-      //     line.style.transition = `width ${duration}ms linear`;
-      //     line.style.width = '100%';
-
-      //     setTimeout(() => {
-      //       line.style.transition = 'none';
-      //       line.style.width = '0%';
-      //       title.style.color = 'var(--main-color)';
-
-      //       const nextIndex = (index + 1) % cards.length;
-      //       animateLine(cards[nextIndex], nextIndex);
-      //     }, duration);
-      //   }
-
-      //   animateLine(cards[0], 0);
-      // });
-
       document.addEventListener("DOMContentLoaded", function() {
         const cardsContainer = document.querySelector('.our-work__bottom-сard').parentElement;
         const cards = document.querySelectorAll('.our-work__bottom-сard');
