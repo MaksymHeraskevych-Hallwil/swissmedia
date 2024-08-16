@@ -201,7 +201,7 @@
 		}
 
 		.div-form3 {
-			width: 0em;
+			width: auto;
 			height: 0.8em;
 		}
 
@@ -412,6 +412,10 @@
 	}
 
 	@media (max-width: 479px) {
+		.hero-circle{
+			display:none;
+		}
+
 		.hero-logo {
 			max-width: 40%;
 			min-width: 8em;
@@ -826,7 +830,7 @@
 		white-space: nowrap;
 		box-sizing: border-box;
 		background-color: var(--Main, #306cfe);
-		padding: 1em;
+		padding: 1.5em;
 		display: flex;
 	}
 
@@ -1665,7 +1669,7 @@
 		}
 
 		.guaranteed-content__bottom-wrapp{
-			padding: 0em 1em;
+			padding: 0em 1em 2em 1em;
 		}
 
 		.guaranteed-card__top-text{
