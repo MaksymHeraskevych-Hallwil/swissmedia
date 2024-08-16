@@ -306,6 +306,7 @@
 	.section-hero{
 		position: relative;
 		background-color: #fff;
+		overflow: hidden;
 	}
 
 	.hero-circle{
