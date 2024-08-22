@@ -432,9 +432,9 @@
             </div>
 
             <div class="div-4">
-              <div class="notif__main-icon cursor-p">
+              <div class="notif__main-icon">
                 <svg
-                  class="h18"
+                  class="h18 cursor-p"
                   width="100%"
                   height="100%"
                   viewBox="0 0 18 18"
@@ -476,7 +476,7 @@
                       <div class="mark-all__text">Mark all as read</div>
                     </div>
                   </div>
-                  <div style="display: none;" class="notif-empty__wrapp notif-popup__empty-wrapp">
+                  <div class="notif-empty__wrapp notif-popup__empty-wrapp">
                     <svg
                       class="notif-empty__icon"
                       width="100%"
@@ -1486,7 +1486,7 @@
                 </svg>
               </div>
 
-              <a href="#" class="btn btn-order">+ New order</a>
+              <a href="#" class="btn-order">+ New order</a>
             </div>
           </div>
         </div>
@@ -3714,7 +3714,7 @@
               <div class="notif-content__bottom-item">
                 <p class="fs-12 m0">Result:</p>
 
-                <div>
+                <div class="notif-content__bottom-count">
                   <p class="fs-12 m0">1-15</p>
 
                   <svg
@@ -3731,6 +3731,18 @@
                       fill="#626880"
                     />
                   </svg>
+
+                  <div class="notif-content__bottom-count-dropp">
+
+                    <div class="notif-content__drop-wrapp">                    
+                      <p class="fs-12 m0">1-30</p>
+                    </div>
+
+                    <div class="notif-content__drop-wrapp">                    
+                      <p class="fs-12 m0">1-45</p>
+                    </div>
+
+                  </div>
                 </div>
 
                 <p class="fs-12 m0">of 253</p>
@@ -4518,38 +4530,110 @@
 
           if (index === 0) {
             document.querySelector(".notif__list-all").style.display = "block";
-            document.querySelector(".mark-all__wrapp").style.color =
+            document.querySelector(".notif-content__top-left .mark-all__wrapp").style.color =
               "var(--btn-color)";
-            document.querySelector(".mark-all__wrapp").style.pointerEvents =
+            document.querySelector(".notif-content__top-left .mark-all__wrapp").style.pointerEvents =
               "auto";
-            document.querySelector(".mark-all__icon").style.color =
+            document.querySelector(".notif-content__top-left .mark-all__icon").style.color =
               "var(--btn-color)";
           } else if (index === 1) {
             document.querySelector(".notif__list-most-recent").style.display =
               "block";
-            document.querySelector(".mark-all__wrapp").style.color =
+            document.querySelector(".notif-content__top-left .mark-all__wrapp").style.color =
               "var(--btn-color)";
-            document.querySelector(".mark-all__icon").style.color =
+            document.querySelector(".notif-content__top-left .mark-all__icon").style.color =
               "var(--btn-color)";
-            document.querySelector(".mark-all__wrapp").style.pointerEvents =
+            document.querySelector(".notif-content__top-left .mark-all__wrapp").style.pointerEvents =
               "auto";
           } else if (index === 2) {
             document.querySelector(".notif__list-earlier").style.display =
               "block";
 
-            document.querySelector(".mark-all__wrapp").style.pointerEvents =
+            document.querySelector(".notif-content__top-left .mark-all__wrapp").style.pointerEvents =
               "none";
 
-            document.querySelector(".mark-all__wrapp").style.color =
+            document.querySelector(".notif-content__top-left .mark-all__wrapp").style.color =
               "var(--p-color)";
 
-            document.querySelector(".mark-all__icon").style.color =
+            document.querySelector(".notif-content__top-left .mark-all__icon").style.color =
               "var(--p-color)";
           }
         });
       });
 
       document.querySelector(".notif__list-all").style.display = "block";
+
+      //open notification popup
+      document.querySelector('.notif__main-icon').addEventListener('click', function(event) {
+        event.stopPropagation();
+        const popupWrapper = document.querySelector('.notif-popup__wrapp');
+        if (popupWrapper.style.display === 'none' || !popupWrapper.style.display) {
+            popupWrapper.style.display = 'block';
+        } else {
+            popupWrapper.style.display = 'none';
+        }
+      });
+
+      document.addEventListener('click', function(event) {
+        const popupWrapper = document.querySelector('.notif-popup__wrapp');
+        if (popupWrapper.style.display === 'block' && !popupWrapper.contains(event.target)) {
+            popupWrapper.style.display = 'none';
+        }
+      });
+
+      document.querySelector('.notif-popup__wrapp').addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+
+      //result counnt show hide
+      document.querySelector('.notif-content__bottom-count').addEventListener('click', function(event) {
+        const dropdown = document.querySelector('.notif-content__bottom-count-dropp');
+        
+        if (dropdown.style.display === 'flex') {
+            dropdown.style.display = 'none';
+        } else {
+            dropdown.style.display = 'flex';
+        }
+
+        event.stopPropagation();
+      });
+
+      document.addEventListener('click', function(event) {
+          const dropdown = document.querySelector('.notif-content__bottom-count-dropp');
+          if (dropdown.style.display === 'flex' && !dropdown.contains(event.target)) {
+              dropdown.style.display = 'none';
+          }
+      });
+
+      document.querySelector('.notif-content__bottom-count-dropp').addEventListener('click', function(event) {
+          event.stopPropagation();
+      });
+
+      document.querySelectorAll('.notif-content__drop-wrapp').forEach(item => {
+          item.addEventListener('click', function() {
+              document.querySelector('.notif-content__bottom-count-dropp').style.display = 'none';
+          });
+      });
+
+      //show delete message
+      let hideTimeout;
+      document.querySelectorAll('.notif__list-item-trash').forEach(item => {
+          item.addEventListener('click', function() {
+              const deletedWrapp = document.querySelector('.notif-deleted__wrapp');
+
+              if (hideTimeout) {
+                  clearTimeout(hideTimeout);
+              }
+
+              deletedWrapp.style.display = 'flex';
+
+              hideTimeout = setTimeout(function(){
+                  deletedWrapp.style.display = 'none';
+              }, 5000);
+          });
+      });
+
+
     </script>
   </body>
 </html

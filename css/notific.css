@@ -225,11 +225,22 @@
 		background-color: #306CFE25;
 	}
 
-	.btn.btn-order{
+	.btn-order{
+		transition: background-color 0.3s;
+		text-decoration: none;
+		font-size: 0.97em;
+		border: 0px;
+		border-radius: 2.78em;
+		padding: 0.83em 1.67em;
 		color: white;
 		background-color: var(--btn-color);
+		cursor: pointer;
 	}
 
+	.btn-order:hover{
+		background-color: #3F77FF!important;
+	}
+	
 	.m0{
 		margin: 0;
 	}
@@ -532,6 +543,41 @@
 		align-items: center;
 	}
 
+	.notif-content__bottom-count{
+		display: flex;
+		gap: 0.6em;
+		padding: 0.83em;
+		border-radius: 45px;
+		min-width: 4em;
+		background-color: #F9F9FB;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.notif-content__bottom-count-dropp{
+		display: none;
+		flex-direction: column;
+		gap: 0.6em;
+		padding: 0.83em;
+		background-color: #F9F9FB;
+		align-items: center;
+		position: absolute;
+		top: 60%;
+		left: 0%;
+		border-bottom-right-radius: 22px;
+		border-bottom-left-radius: 22px;
+	}
+
+	.notif-content__drop-wrapp{
+		display: flex;
+		align-items: center;
+		min-width: 4em;
+		justify-content: center;
+		gap: 0.6em;
+	}
+
 	.notif-pagination__item-wrapp{
 		cursor: pointer;
 		display: flex;
@@ -579,7 +625,7 @@
 	}
 
 	.notif-deleted__wrapp{
-		display: flex;
+		display: none;
 		align-items: center;
 		padding: 1.25em;
 		background-color: var(--main-color);
@@ -602,6 +648,7 @@
 	}
 
 	.notif-popup__wrapp{
+		display: none;
 		background-color: white;
 		border-radius: 24px;
 		filter: drop-shadow(0px 5px 40px rgba(0, 0, 0, 0.05)) drop-shadow(-68px 111px 78px rgba(0, 0, 0, 0.01)) drop-shadow(-30px 49px 58px rgba(0, 0, 0, 0.02)) drop-shadow(-8px 12px 32px rgba(0, 0, 0, 0.02));
@@ -659,6 +706,7 @@
 	}
 
 	.notif__btn-popup{
+		transition: background-color 0.3s;
 		margin-top: 1.67em;
 		background-color: var(--btn-color);
 		color: white;
@@ -666,7 +714,11 @@
 		padding-left: 0.83em;
 		padding-right: 0.83em;
 		border-radius: 8px;
+		cursor: pointer;
+	}
 
+	.notif__btn-popup:hover{
+		background-color: #3F77FF!important;
 	}
 
 	@media screen and (max-width: 784px){
@@ -703,6 +755,10 @@
 
 		.w40{
 			min-width: 1.5em;
+		}
+
+		.notif__search-input {
+			padding: 0.83em 1.11em 0.83em 3.5em !important;
 		}
 		
 	}
