@@ -2813,7 +2813,7 @@
 		top: -17.36em;
 		background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
 		opacity: 0.05;
-		border-radius: 200px;
+		border-radius: 100%;
 	}
 
 	.login__circle-bottom{
@@ -2874,7 +2874,7 @@
 	}
 
 	.login__content-item-img{
-		width: 41.67em;
+		max-width: 41.67em;
 		height: auto;
 		margin-bottom: 5em;
 	}
@@ -2941,6 +2941,7 @@
 	}
 
 	.pass-error{
+		display: none;
 		color: #FE3030;
 		font-size: 0.97em;
 		margin: 0;
