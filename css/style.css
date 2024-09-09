@@ -2800,6 +2800,8 @@
 	}
 
 	.login__grid-right{
+		padding-top: 26em;
+		justify-content: flex-start;
 		max-width: 41.67em;
     	margin-left: auto;
 		margin-right: auto;
