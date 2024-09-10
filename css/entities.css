@@ -1083,6 +1083,7 @@
 	.add-new__item-dropdown{
 		position: relative;
 		background-color: #FAFBFC;
+		box-shadow: none;
 		border: 1px solid #EBECF0;
 		cursor: pointer;
 	}
@@ -1093,7 +1094,12 @@
 		right: 1.81em;
 		top: 0%;
 		bottom: auto;
+		color: var(--p-color);
+	}
 
+	.line__w-full{
+		width: 120%;
+    	margin-left: -10%;
 	}
 
 	.fw-500{
@@ -1107,6 +1113,45 @@
 	.add-new__checkbox-text{
 		color: var(--p-color);
 		font-weight: 400;
+	}
+
+	.add-new__monitorings-popup{
+		display: none;
+		flex-direction: column;
+		gap: 12px;
+		position: absolute;
+		left: 0;
+		margin-top: 0.83em;
+		top: 100%;
+		background-color: white;
+		padding: 1.39em;
+		width: 90%;
+		max-height: 27em;
+		overflow: auto;
+		border-radius: 20px;
+		box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.05), -68px 111px 78px rgba(0, 0, 0, 0.01), -30px 49px 58px rgba(0, 0, 0, 0.02), -8px 12px 32px rgba(0, 0, 0, 0.02);
+	}
+
+	.add-new__popup-monitoring-item{
+		background: white;
+		border: 0px;
+		box-shadow: none;
+	}
+
+	.add-new__popup-monitoring-item:nth-child(odd) {
+		background-color: #FAFBFC;
+	}
+
+	.monitoring-item__active{
+		background-color: #F1F5FF!important;
+	}
+
+	.monitoring-item__activ-icon{
+		position: absolute;
+		right: 1.81em;
+		width: 0.97em;
+		top: auto;
+		bottom: auto;
 	}
 
 	/* footer */
@@ -1513,6 +1558,10 @@
 			top: 1.5em;
 			right: 2em;
 			color: #000;
+		}
+
+		.mob__w70{
+			width: 70%;
 		}
 
 		.section-footer {

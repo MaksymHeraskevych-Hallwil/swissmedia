@@ -1552,17 +1552,57 @@
           <div>
             <div class="confirm-delete__title">Add new Monitoring</div>
 
-            <div class="line-grey mb24"></div>
+            <div class="line-grey mb24 line__w-full"></div>
 
             <div class="confirm-delete__content-wrapp add-new__item-dropdown">
               <img class="w40" src="img/img-card.png" alt="">
-              <div class="confirm-delete__content-info">
+              <div class="confirm-delete__content-info mob__w70">
                 <div class="">Business Purchase Agreement</div>
                 <p class="fs-12 m0">2464 Royal Ln. Mesa, New Jersey 45463</p>
                 <svg class="add-new__icon-dropdown" width="100%" height="100%" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.234315 1.12494C0.546734 0.81252 1.05327 0.81252 1.36569 1.12494L6 5.75925L10.6343 1.12494C10.9467 0.81252 11.4533 0.81252 11.7657 1.12494C12.0781 1.43736 12.0781 1.94389 11.7657 2.25631L6 8.022L0.234315 2.25631C-0.0781049 1.94389 -0.0781049 1.43736 0.234315 1.12494Z" fill="#8A90A9"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.234315 1.12494C0.546734 0.81252 1.05327 0.81252 1.36569 1.12494L6 5.75925L10.6343 1.12494C10.9467 0.81252 11.4533 0.81252 11.7657 1.12494C12.0781 1.43736 12.0781 1.94389 11.7657 2.25631L6 8.022L0.234315 2.25631C-0.0781049 1.94389 -0.0781049 1.43736 0.234315 1.12494Z" fill="currentColor"/>
                 </svg>
                   
+              </div>
+
+              <div class="add-new__monitorings-popup">
+
+                <div class="confirm-delete__content-wrapp add-new__popup-monitoring-item monitoring-item__active">
+                  <img class="w40" src="img/img-card.png" alt="">
+                  <div class="confirm-delete__content-info">
+                    <div class="">Business Purchase Agreement</div>
+                    <p class="fs-12 m0">2464 Royal Ln. Mesa, New Jersey 45463</p>
+                  </div>
+
+                  <svg class="monitoring-item__activ-icon" width="100%" height="100%" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2404 0.882657C13.5865 1.2288 13.5865 1.79002 13.2404 2.13616L4.93182 10.4447L0.75961 6.27253C0.413463 5.92638 0.413463 5.36517 0.75961 5.01902C1.10576 4.67287 1.66697 4.67287 2.01312 5.01902L4.93182 7.93772L11.9869 0.882657C12.333 0.53651 12.8942 0.53651 13.2404 0.882657Z" fill="#306CFE"/>
+                  </svg>
+                    
+                </div>
+
+                <div class="confirm-delete__content-wrapp add-new__popup-monitoring-item">
+                  <img class="w40" src="img/img-card.png" alt="">
+                  <div class="confirm-delete__content-info">
+                    <div class="">Business Purchase Agreement</div>
+                    <p class="fs-12 m0">2464 Royal Ln. Mesa, New Jersey 45463</p>
+                  </div>
+                </div>
+
+                <div class="confirm-delete__content-wrapp add-new__popup-monitoring-item">
+                  <img class="w40" src="img/img-card.png" alt="">
+                  <div class="confirm-delete__content-info">
+                    <div class="">Business Purchase Agreement</div>
+                    <p class="fs-12 m0">2464 Royal Ln. Mesa, New Jersey 45463</p>
+                  </div>
+                </div>
+
+                <div class="confirm-delete__content-wrapp add-new__popup-monitoring-item">
+                  <img class="w40" src="img/img-card.png" alt="">
+                  <div class="confirm-delete__content-info">
+                    <div class="">Business Purchase Agreement</div>
+                    <p class="fs-12 m0">2464 Royal Ln. Mesa, New Jersey 45463</p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -1579,7 +1619,7 @@
             </div>
 
             <div class="add-new__checkbox-wrapp">
-              <input type="checkbox" id="addNewCheckbox">
+              <input type="checkbox" id="addNewCheckbox" checked>
               <label class="add-new__checkbox-text fs-14" for="addNewCheckbox">Yes, I would like to submit a new monitoring order (including automatic rating removal) and hereby complete my subscription.</label>
             </div>
 
@@ -1794,7 +1834,7 @@
               </p>
             </div>
 
-            <a class="btn__new-entity">+ Add new Monitoring</a>
+            <a class="btn__new-entity btn__add-new">+ Add new Monitoring</a>
           </div>
 
           <div class="notif-content__wrapp">
@@ -3908,6 +3948,47 @@
           });
         });
 
+
+        // add new
+        document.querySelectorAll('.confim-delete__close').forEach(function(closeButton) {
+          closeButton.addEventListener('click', function() {
+            var parentElement = this.closest('.confirm-add-new__bckgr');
+            if (parentElement) {
+              parentElement.style.display = 'none';
+              document.querySelector('.add-new__icon-dropdown').style.rotate = '0deg';
+              document.querySelector('.add-new__monitorings-popup').style.display = 'none';
+            }
+          });
+        });
+
+        //open add new popup
+        document.querySelectorAll('.btn__add-new').forEach(function(button) {
+          button.addEventListener('click', function() {
+            var backgroundElement = document.querySelector('.confirm-add-new__bckgr');
+            if (backgroundElement) {
+              backgroundElement.style.display = 'flex';
+            }
+          });
+        });
+
+        // show/hide list add new
+        document.querySelector('.add-new__item-dropdown').addEventListener('click', function () {
+          const popup = document.querySelector('.add-new__monitorings-popup');
+          const icon = document.querySelector('.add-new__icon-dropdown');
+          
+          if (popup.style.display === 'flex') {
+            
+            popup.style.display = 'none';
+            icon.style.rotate = '0deg';
+            icon.style.color = '#8A90A9';
+          } else {
+            popup.style.display = 'flex';
+            icon.style.rotate = '180deg';
+            icon.style.color = '#306CFE';
+          }
+        });
+
+
         // close for parent block on click
         document.querySelectorAll('.notif-deleted__close').forEach(function(closeButton) {
           closeButton.addEventListener('click', function() {
@@ -3927,6 +4008,7 @@
             }
           });
         });
+
 
         //count words
         const maxLength = 24;
