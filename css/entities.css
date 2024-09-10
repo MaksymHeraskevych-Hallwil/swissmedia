@@ -1074,10 +1074,20 @@
 		gap: 12px;
 	}
 
+	.add-new__price-wrapp--added{
+		background: white;
+		padding: 0;
+	}
+
 	.add-new__price-item{
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		gap: 12px;
+	}
+
+	.add-new__price-item--added{
+		justify-content: flex-start;
 	}
 
 	.add-new__item-dropdown{
@@ -1125,17 +1135,22 @@
 		top: 100%;
 		background-color: white;
 		padding: 1.39em;
-		width: 90%;
+		width: 92%;
 		max-height: 27em;
 		overflow: auto;
 		border-radius: 20px;
 		box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.05), -68px 111px 78px rgba(0, 0, 0, 0.01), -30px 49px 58px rgba(0, 0, 0, 0.02), -8px 12px 32px rgba(0, 0, 0, 0.02);
 	}
 
+	.confirm-add-new__bckgr .confirm-delete__popup{
+		max-width: 34.7em;
+	}
+
 	.add-new__popup-monitoring-item{
 		background: white;
 		border: 0px;
 		box-shadow: none;
+		position: relative;
 	}
 
 	.add-new__popup-monitoring-item:nth-child(odd) {
@@ -1146,12 +1161,44 @@
 		background-color: #F1F5FF!important;
 	}
 
+	.monitoring-item__active .confirm-delete__content-info{
+		color: var(--btn-color);
+	}
+
 	.monitoring-item__activ-icon{
 		position: absolute;
 		right: 1.81em;
 		width: 0.97em;
 		top: auto;
 		bottom: auto;
+	}
+
+	.add-new__added-top{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 2.22em;
+	}
+
+	.add-new__added-icon{
+		width: 6.25em;
+		margin-bottom: 1.67em;
+	}
+
+	.jc-fe{
+		justify-content: flex-end;
+	}
+
+	.add-new__attention-wrapp{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		background: #EAF0FF;
+		padding: 1.39em;
+		gap: 12px;
+		align-items: center;
+		border-radius: 16px;
+		margin-bottom: 2.22em;
 	}
 
 	/* footer */
