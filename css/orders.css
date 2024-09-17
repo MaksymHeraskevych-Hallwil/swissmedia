@@ -162,6 +162,7 @@ p{
 
 .btn-order:hover{
 	background-color: #3F77FF!important;
+	color: white;
 }
 
 .m0{
@@ -1252,6 +1253,7 @@ input.datepicker__input{
 	display: flex;
 	gap: 1.11em;
 	align-items: flex-start;
+	flex-wrap: wrap;
 }
 
 .orders__type-btn--icon{
