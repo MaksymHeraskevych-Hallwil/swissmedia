@@ -1318,14 +1318,21 @@
 		.div-70 {
 		font-family: Poppins, sans-serif;
 		}
-		.div-71 {
+
+	.our-work__content{
+		justify-content: space-between;
+		flex-direction: column;
+		width: 100%;
+	}
+
+		.sales__video-wrapp {
 		align-self: start;
 		display: flex;
 		margin-top: 45px;
 		gap: 12px;
 		}
 		@media (max-width: 991px) {
-		.div-71 {
+		.sales__video-wrapp {
 			margin-top: 40px;
 		}
 		}
