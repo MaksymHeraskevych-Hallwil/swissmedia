@@ -22,7 +22,6 @@
 		overscroll-behavior: none;
 		font-family: 'Poppins', sans-serif;
 		background-color: transparent;
-		/* font-size: 1vw; */
 		margin: 0;
 		color: var(--main-color);
 	}
@@ -2803,11 +2802,11 @@
 		color: white;
 		background-color: var(--btn-color);
 		padding-top: 8em;
-		padding-bottom: 8em;
+		padding-bottom: 6em;
 	}
 
 	.login__grid-right{
-		padding-top: 26em;
+		padding-top: 28em;
 		justify-content: flex-start;
 		max-width: 41.67em;
     	margin-left: auto;
