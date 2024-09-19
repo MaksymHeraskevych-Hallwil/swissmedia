@@ -86,6 +86,43 @@ p{
 	border-bottom: 1px solid #00000010;
 }
 
+/* account dropdown */
+.notif__user-icon{
+	position: relative;
+}
+
+.account-dropdown__wrapp{
+	display: none;
+	flex-direction: column;
+	width: 17em;
+	align-items: flex-start;
+	padding: 1.39em;
+	position: absolute;
+	right: 0%;
+	top: 100%;
+	background: #FFFFFF;
+	box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.05), -68px 111px 78px rgba(0, 0, 0, 0.01), -30px 49px 58px rgba(0, 0, 0, 0.02), -8px 12px 32px rgba(0, 0, 0, 0.02);
+	border-radius: 20px;
+}
+
+.account-dropdown__nav{
+	text-decoration: none;
+	padding: 0.83em 0.97em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	color: var(--p-color);
+}
+
+.account-dropdown__nav:hover{
+	color: var(--main-color);
+}
+
+.w14{
+	width: 0.97em;
+}
+
 .h18{
 	height: 1.25em;
 }
