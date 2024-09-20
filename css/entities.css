@@ -308,6 +308,11 @@
 		width: 2.78em;
 	}
 
+	.mark-all__icon{
+		width: 1.25em;
+		color: var(--btn-color);
+	}
+
 	.notif-top__wrapp{
 		margin-top: 4.17em;
 	}
@@ -439,6 +444,16 @@
 		gap: 1.39em;
 		padding: 1.39em;
 		border-radius: 16px;
+	}
+
+	.notif__list-item-trash {
+		display: none;
+		min-width: 0.97em;
+		max-width: 0.97em;
+	}
+	
+	.notif__list-item:hover .notif__list-item-trash {
+		display: block;
 	}
 
 	.notif__list-item:hover .notif-circle {
