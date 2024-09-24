@@ -242,6 +242,7 @@ p{
 
 .w40{
 	width: 2.78em;
+	min-width: 2.78em;
 }
 
 .notif-top__wrapp{
@@ -433,27 +434,9 @@ p{
 	margin-bottom: 10px;
 }
 
-.notif-deleted__wrapp{
-	display: none;
-	align-items: center;
-	padding: 1.25em;
-	background-color: var(--main-color);
-	font-size: 1.11em;
-	color: white;
-	position: fixed;
-	right: 3.47em;
-	top: 3.47em;
-	z-index: 9;
-	border-radius: 12px;
-	gap: 0.83em;
-	width: 100%;
-	max-width: 26.3em;
-}
-
 .deleted__name{
 	font-weight: 600;
 }
-
 
 .notif-deleted__close{
 	cursor: pointer;
@@ -683,7 +666,7 @@ p{
 	display: none;
 }
 
-.hide-block{
+.changes-account__wrapp.hide-block{
 	display: none;
 }
 
@@ -943,10 +926,10 @@ p{
 .confim-delete__close{
 	width: 1.11em;
 	height: auto;
-	color: white;
+	color: #000;
 	position: absolute;
-	top: -2rem;
-	right: -2rem;
+	top: 2rem;
+	right: 1.5rem;
 	cursor: pointer;
 }
 
@@ -1278,9 +1261,9 @@ p{
 	color: var(--p-color);
 }
 
-.line__w-full{
-	width: 120%;
-	margin-left: -10%;
+.line__w-full-dashboard{
+	width: 110%;
+	margin-left: -5%;
 }
 
 .fw-500{
@@ -1296,26 +1279,155 @@ p{
 	font-weight: 400;
 }
 
-.add-new__monitorings-popup{
+
+/* account settings */
+.account-settings__wrapp{
 	display: none;
-	flex-direction: column;
-	gap: 12px;
-	position: absolute;
-	left: 0;
-	margin-top: 0.83em;
-	top: 100%;
-	background-color: white;
-	padding: 1.39em;
-	width: 92%;
-	max-height: 27em;
-	overflow: auto;
-	border-radius: 20px;
-	box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.05), -68px 111px 78px rgba(0, 0, 0, 0.01), -30px 49px 58px rgba(0, 0, 0, 0.02), -8px 12px 32px rgba(0, 0, 0, 0.02);
+	background-color: #00000025;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	padding: 9.72em 0em;
+	z-index: 9;
+	justify-content: center;
+	align-items: flex-start;
 }
 
-.confirm-add-new__bckgr .confirm-delete__popup{
-	max-width: 34.7em;
+.account-settings__popup{
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	background-color: white;
+	padding: 2.22em;
+	position: relative;
+	width: 78%;
+	border-radius: 20px;
+	box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.05), -68px 111px 78px rgba(0, 0, 0, 0.01), -30px 49px 58px rgba(0, 0, 0, 0.02), -8px 12px 32px rgba(0, 0, 0, 0.02);
+	max-width: 48.6em;
+	max-height: 72vh;
+    overflow: auto;
 }
+
+.account-settings__content{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 1.67em;
+	gap: 30px;
+	border: 1px solid rgba(138, 144, 169, 0.2);
+	border-radius: 12px;
+}
+
+.account-settings__user-form{
+	display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 2.08em;
+    grid-row-gap: 1.67em;
+	width: 100%;
+}
+
+.account-settings__input-wrapp{
+	display: flex;
+	gap: 8px;
+    flex-direction: column;
+}
+
+input.account-settings__form-input{
+	display: none;
+	padding: 0.83em 1.11em;
+	border: 1px solid rgba(138, 144, 169, 0.4);
+	width: auto;
+	border-radius: 8px;
+}
+
+.account-settings__btn-wrapp{
+	display: none;
+}
+
+.gap10{
+	gap: 10px;
+}
+
+.account-settings__btn-edit{
+	width: 4em;
+	display: flex;
+    align-items: center;
+    gap: 6px;
+	padding: 0.83em 0.97em;
+	cursor: pointer;
+}
+
+.ai-fs{
+	align-items: flex-start;
+}
+
+.changes-account__wrapp{
+	display: flex;
+	align-items: center;
+	padding: 1.25em;
+	background-color: var(--main-color);
+	font-size: 1.11em;
+	color: white;
+	position: fixed;
+	right: 3.47em;
+	top: 3.47em;
+	z-index: 9;
+	border-radius: 12px;
+	gap: 0.83em;
+	width: 100%;
+	max-width: 17.3em;
+}
+
+.link__clr-blue{
+	color: var(--btn-color);
+	text-decoration: none;
+}
+
+.pass-input__wrapp--account-settings{
+	position: relative;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.change-password__popup{
+	max-width: 33em;
+	display: none;
+}
+
+.account-settings__change-password--input {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.83em 1.11em;
+    gap: 6px;
+    border: 1px solid rgba(138, 144, 169, 0.2);
+    border-radius: 8px;
+    width: 100%;
+}
+
+.account-settings__change-pass--input-wrapp{
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.pass-icon {
+    position: absolute;
+    width: 1.39em;
+    height: auto;
+    right: 1em;
+    top: 0.6em;
+    bottom: auto;
+    cursor: pointer;
+}
+
+/* .account-settings__email-confirmed{
+	display: none;
+} */
 
 .add-new__popup-monitoring-item{
 	background: white;
@@ -1894,7 +2006,7 @@ a .social__icon{
 		justify-content: center;
 	}
 
-	.notif-deleted__wrapp{
+	.changes-account__wrapp{
 		padding: 1em;
 		right: 1em;
 		top: 1em;
@@ -1981,7 +2093,7 @@ a .social__icon{
 		width: 100%;
 	}
 
-	.notif-deleted__wrapp{
+	.changes-account__wrapp{
 		font-size: 0.79em;
 	}
 
@@ -2034,6 +2146,20 @@ a .social__icon{
 	.footer-content__top {
 		flex-direction: column;
 		gap: 4em;
+	}
+
+	/* account settings mobile */
+	input.account-settings__form-input{
+		width: 90%;
+		padding: 0.63em 0.87em;
+		font-size: 0.8em;
+	}
+
+	.account-settings__user-form{
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+		grid-column-gap: 2.08em;
+		grid-row-gap: 1.11em;
 	}
 
 	.column-17 {
