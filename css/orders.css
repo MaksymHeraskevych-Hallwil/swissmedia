@@ -1719,6 +1719,11 @@ a .social__icon{
 		right: 1em;
 		top: 1em;
 	}
+	.main-tabs__wrapp{
+		display: flex;
+		border-radius: 8px;
+		border: 1px solid #8A90A920;
+	}
 
 	.main-tabs__wrapp, .orders__filter-tabs {
 		flex-direction: column;

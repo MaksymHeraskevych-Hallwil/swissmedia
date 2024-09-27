@@ -1526,7 +1526,7 @@
           </div>
         </div>
       </nav>
-      
+
 
       <!-- account settings popup -->
       <div class="account-settings__wrapp">
@@ -3009,6 +3009,8 @@
         // open account settings
         document.querySelector('.account-settings__nav').addEventListener('click', function() {
           document.querySelector('.account-settings__wrapp').style.display = 'flex';
+          document.querySelector('.change-password__popup').style.display = 'none';
+          document.querySelector('.account-settings__popup-main').style.display = 'block';
         });
 
         // сlose account settings
@@ -3094,19 +3096,6 @@
             changePassword.style.display = 'none';
         });
 
-
-
-        //count words
-        const maxLength = 18;
-
-        const textElements = document.querySelectorAll('.not-full__text');
-        textElements.forEach(function (element) {
-          const originalText = element.textContent;
-          if (originalText.length > maxLength) {
-            const truncatedText = originalText.slice(0, maxLength) + '...';
-            element.textContent = truncatedText;
-          }
-        });
 
       });
 
