@@ -794,6 +794,18 @@ p{
 	margin-top: 5em!important;
 }
 
+.dashboard__monitoring-btn{	
+	display: flex;
+	align-items: center;
+	padding: 0.69em 1.53em;
+	border-radius: 8px;
+	background-color: var(--btn-color);
+	color: white;
+	font-weight: 500;
+	font-size: 0.97em;
+	gap: 6px;
+}
+
 /* pagination */
 .notif-content__bottom-wrapp{
 	display: flex;
@@ -1036,6 +1048,9 @@ p{
 }
 
 .top-right__wrapp{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 	padding: 1.67em;
 	background-color: #0F172A;
 	border-radius: 16px;
