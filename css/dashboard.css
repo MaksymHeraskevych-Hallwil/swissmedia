@@ -1449,9 +1449,9 @@ input.account-settings__form-input{
 .switch {
 	position: relative;
 	display: inline-block;
-	min-width: 60px;
-	width: 60px;
-	height: 34px;
+	min-width: 4.17em;
+	width: 4.17em;
+	height: 2.36em;
 }
 
 /* Hide default HTML checkbox */
@@ -1477,8 +1477,8 @@ input.account-settings__form-input{
 .slider:before {
 	position: absolute;
 	content: "";
-	height: 26px;
-	width: 26px;
+	height: 1.81em;
+	width: 1.81em;
 	left: 4px;
 	bottom: 4px;
 	background-color: white;
@@ -1495,9 +1495,9 @@ box-shadow: 0 0 1px #4F46E5;
 }
 
 input:checked + .slider:before {
--webkit-transform: translateX(26px);
--ms-transform: translateX(26px);
-transform: translateX(26px);
+-webkit-transform: translateX(1.81em);
+-ms-transform: translateX(1.81em);
+transform: translateX(1.81em);
 }
 
 .slider.round {
