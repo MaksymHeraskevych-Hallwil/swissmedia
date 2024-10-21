@@ -17,7 +17,7 @@
     />
   </head>
   <body>
-    <div class="page__wrapp">
+    <div class="page__wrapp testim-company__wrapp">
 
       <!-- navbar -->
       <nav class="navbar" id="navbar">
@@ -171,6 +171,7 @@
         
         </div>
       </section>
+
       <section>
         <div class="container">
           <div class="filters__wrapp">
@@ -795,7 +796,6 @@
 
       </section>
 
-
       <div class="marquee">
         <div class="company-logo__wrapp">
 
@@ -1380,6 +1380,7 @@
             
         </div>
       </div>
+
       <section class="section__testimonials">
 
         <!-- popup video -->
@@ -1868,7 +1869,9 @@
         </div>
         
       </section>
+
       <section class="section__back">
+        <div class="circle__succesful"></div>
         <div class="container">
         <div class="success__wrapp">
           <div class="success__title_wrapp">
@@ -2613,28 +2616,28 @@
         //   });
         // });
 
-        // for opening testimonials popup video
-      document.querySelectorAll('.testim__icon-play').forEach(icon => {
-        icon.addEventListener('click', function() {
-          const videoIconAttr = this.getAttribute('testim-video-icon');
-          const videoPopup = document.querySelector(`.slider-video__popup-p-relative[testim-video="${videoIconAttr}"]`);
-          const popupContainer = document.querySelector('.slider-video__popup');
-          
-          if (videoPopup && popupContainer) {
-              document.querySelectorAll('.slider-video__popup-p-relative').forEach(popup => {
-                  popup.classList.remove('active');
+  // for opening testimonials popup video
+  document.querySelectorAll('.testim__icon-play').forEach(icon => {
+    icon.addEventListener('click', function() {
+      const videoIconAttr = this.getAttribute('testim-video-icon');
+      const videoPopup = document.querySelector(`.slider-video__popup-p-relative[testim-video="${videoIconAttr}"]`);
+      const popupContainer = document.querySelector('.slider-video__popup');
+      
+      if (videoPopup && popupContainer) {
+          document.querySelectorAll('.slider-video__popup-p-relative').forEach(popup => {
+              popup.classList.remove('active');
 
-                  const iframe = popup.querySelector("iframe");
-                  if (iframe) {
-                    iframe.src = iframe.src;
-                  }
-              });
+              const iframe = popup.querySelector("iframe");
+              if (iframe) {
+                iframe.src = iframe.src;
+              }
+          });
 
-              popupContainer.classList.add('active');
-              videoPopup.classList.add('active');
-          }
-        });
-      });
+          popupContainer.classList.add('active');
+          videoPopup.classList.add('active');
+      }
+    });
+  });
 
   // for closing testimonials popup video
   document.querySelectorAll('.slider-video__popup-close').forEach(closeIcon => {
