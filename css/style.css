@@ -2230,7 +2230,6 @@
 		margin-top: 2.78em;
 		color: var(--Main, #306cfe);
 		padding: 0.83em 1.67em;
-		font-size: 0.97em;
 		text-decoration: none;
 	}
 
@@ -2247,7 +2246,6 @@
 
 		.btn__cta {
 			margin-top: 2em;
-			font-size: 0.87em;
 		}
 	}
 	

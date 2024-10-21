@@ -112,6 +112,7 @@ filter: brightness(0) invert(1) ;
     gap: 0.735em;
     margin-top: 3.6em;
     margin-bottom: 9em;
+    padding: 0em 1em;
 
 }
 .filters__nav_arrow, .filters__nav_item{
