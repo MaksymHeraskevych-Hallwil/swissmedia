@@ -294,6 +294,10 @@
 		z-index: 1;
 	}
 
+	.bb-1 {
+		border-bottom: 1px solid #00000010;
+	}
+
 	@media (max-width: 479px) {
 		.navbar {
 			padding: 1.2em 1em;

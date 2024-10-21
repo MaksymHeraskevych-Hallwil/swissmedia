@@ -226,8 +226,10 @@ color: var(--p-color);
 }
 .section__back{
     padding: 11.11em 0 6.94em;
-    /* background: #F7F9FE; */
+    overflow: hidden;
     position: relative;
+    background: #fff;
+
 }
 .blue--text{
     color: #306CFE;
@@ -382,10 +384,11 @@ color: var(--p-color);
     height: inherit;
 }
   
-  
   .section__testimonials{
-    padding: 11.1em 0;;
+    padding: 11.1em 0;
+    background-color: white;
   }
+
   .slider__video.slick-slider{
     overflow: visible !important;
   }
