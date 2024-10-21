@@ -2387,7 +2387,7 @@
 
 	.footer-content__bottom {
 		padding-top: 3.06em;
-		border-top: 1px solid #9FA2AA;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
 		justify-content: space-between;
 		align-items: start;
 		display: flex;
