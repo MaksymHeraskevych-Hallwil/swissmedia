@@ -33,6 +33,7 @@ h1, h2, h3, p{
 .filters__info_item.br{
     border-right: 1px solid rgba(138, 144, 169, 0.2);
 }
+
 .filters__info{
     display: grid;
     background: #f5f5f5;
@@ -48,6 +49,8 @@ h1, h2, h3, p{
            -121px 197px 93px 0px rgba(0, 0, 0, 0),
            -190px 308px 150px 0px rgba(0, 0, 0, 0),
            30px 40px 240px 0px rgba(0, 0,0, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
            
 }
 .filters__info::after{
@@ -77,7 +80,7 @@ h1, h2, h3, p{
 .info__img{
     position: absolute;
     max-height: 2.7em;
-    top: 25%;
+    top: 42%;
     max-width: 82%;
 }
 .filters__info_item:hover {
@@ -618,6 +621,7 @@ color: var(--p-color);
 
     .filters__nav{
         margin-bottom: 5em;
+        justify-content: center;
     }
 
     .filters__drop_wrapp, .filters__flex{
@@ -659,6 +663,9 @@ color: var(--p-color);
 }
 
 @media screen and (max-width:479px) {
+    .section.small--padd{
+        padding: 8em 1em 3.8em;
+    }
 
     .slide-arrow.next-arrow, .slider-arrow.right-arrow {
         margin-right: 0.4rem;
