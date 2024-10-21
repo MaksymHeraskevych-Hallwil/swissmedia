@@ -224,6 +224,11 @@ color: var(--p-color);
 .arrow__drop.show {
     transform: rotate(180deg); 
 }
+
+.bckg__white{
+    background: #fff;
+}
+
 .section__back{
     padding: 11.11em 0 6.94em;
     overflow: hidden;
