@@ -23,6 +23,7 @@ h1, h2, h3, p{
     max-width: 32em;
 }
 .filters__info_item{
+    text-decoration: none;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -168,6 +169,7 @@ filter: brightness(0) invert(1) ;
     display: flex;
     font-size: 0.97em;
     cursor: pointer;
+    align-items: center;
 }
 .filters__search {
     justify-content: flex-start;
@@ -382,11 +384,15 @@ color: var(--p-color);
     cursor: pointer;
     margin-right: 8px;
     margin-left: 8px;
-    width: 26.4em;
+    width: 25.2em;
 }
 
 .slider__video_item.slick-slide{
     height: inherit;
+}
+
+.container__slider-testimonials{
+    overflow: hidden;
 }
   
   .section__testimonials{
